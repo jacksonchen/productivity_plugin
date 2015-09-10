@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Cleo</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        width: 200px;
+        height: 200px;
+      }
+      div#start, div#end {
+        width: 50%;
+        margin: 0 auto;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: rgb(35, 186, 50);
+        cursor: pointer;
+      }
+
+      div#end {
+        background-color: rgb(200, 62, 62);
+        color: #FFF;
+      }
+
+      div#time {
+        padding: 10px;
+        display: block;
+        text-align: center;
+      }
+
+      div#figure {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+      }
+    </style>
+    <script src="bin/jquery.min.js"></script>
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <div id="start">Start session</div>
+    <div id="end">Stop session</div>
+    <div id="time">Seconds you have spent being productive:<div id="figure">0</div></div>
+  </body>
+</html>

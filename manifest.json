@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "ProductivityTimer",
+  "description": "Timer for Productivty",
+  "version": "1.1.5",
+
+  "author": "Jackson Chen",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "PT"
+  },
+
+  "content_scripts": [
+  {
+    "js": [ "bin/jquery.min.js", "js/popup.js" ],
+    "all_frames": true,
+    "run_at": "document_start",
+    "matches": [ "http://*/*",
+                 "https://*/*" ]
+  }],
+
+  "background" : {
+    "scripts": [ "js/blocked.js" ],
+    "persistent": true
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/",
+    "https://*/",
+    "storage"
+  ]
+}
